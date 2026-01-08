@@ -1,4 +1,4 @@
-import { b as bodyLockToggle, a as bodyLockStatus } from "./common.min.js";
+import { b as bodyLockToggle, c as bodyLockStatus } from "./common.min.js";
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) return;
