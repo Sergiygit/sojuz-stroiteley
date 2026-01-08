@@ -83,6 +83,114 @@
 .union-function__member-company {
   line-height: 150%;
 }
+
+.representatives__title {
+  margin-bottom: 0.625rem;
+}
+.representatives__text-block {
+  max-width: 40.25rem;
+}
+.representatives__second-title {
+  margin-bottom: 0.75rem;
+}
+.map-region {
+  fill: #d7e4ff;
+  transition: fill 0.3s;
+  cursor: pointer;
+}
+
+.map-region:hover {
+  fill: #a6c8ff;
+}
+
+.marker {
+  cursor: pointer;
+  pointer-events: visiblePainted;
+}
+
+.marker circle {
+  transition: all 0.3s ease 0s;
+}
+
+.marker:hover circle {
+  r: 8;
+}
+
+.marker:hover {
+  r: 8;
+  fill: orange;
+}
+
+.marker .map-marker-wave {
+  fill: #007BFF;
+  opacity: 0.4;
+  animation: wave 1.8s infinite ease-out;
+}
+
+@keyframes wave {
+  0% {
+    r: 6;
+    opacity: 0.5;
+  }
+  100% {
+    r: 20;
+    opacity: 0;
+  }
+}
+.marker {
+  pointer-events: auto;
+}
+
+.marker circle,
+.marker .map-marker-wave {
+  pointer-events: none;
+}
+
+.map-popup {
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+.map-popup__line {
+  position: absolute;
+  width: 0.125rem;
+  height: 3.75rem;
+  background: #007BFF;
+  left: 0.25rem;
+  top: 0.1875rem;
+  transform: translateX(50%);
+}
+.map-popup__card {
+  position: absolute;
+  top: 3.75rem;
+  left: -6.25rem;
+}
+.map-popup__card {
+  background: white;
+  border: 0.0625rem solid #ccc;
+  padding: 0.9375rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
+  color: var(--dark, #231F20);
+}
+.map-popup__card {
+  line-height: 150%;
+}
+.map-popup__image {
+  position: relative;
+  width: 60%;
+  margin: 0.5rem auto;
+}
+.map-popup__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.map-popup__position {
+  opacity: 0.7;
+}
 @media (max-width: 81.375em) and (width <= 20em) {
   .union-function__card {
     padding: 0.625rem;
@@ -135,6 +243,9 @@
   .page__union {
     margin-bottom: 2.25rem;
   }
+  .page__representatives {
+    margin-bottom: 2.25rem;
+  }
   .management-structure__cards {
     gap: 0.75rem;
   }
@@ -152,6 +263,9 @@
   }
   .union__sub-title:not(:last-child) {
     margin-bottom: 0.625rem;
+  }
+  .union__text-body {
+    margin-bottom: 1.5rem;
   }
   .union-function__cards {
     gap: 0.75rem;
@@ -177,6 +291,30 @@
   .union-function__member-company {
     font-size: 0.875rem;
   }
+  .representatives__text-block {
+    margin-bottom: 1.5rem;
+  }
+  .representatives__text:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+  .map-popup__card {
+    width: 12.5rem;
+  }
+  .map-popup__card {
+    font-size: 0.875rem;
+  }
+  .map-popup__image {
+    height: 6.25rem;
+  }
+  .map-popup__title {
+    margin-bottom: 0.5rem;
+  }
+  .map-popup__position {
+    margin-bottom: 0.5rem;
+  }
+  .map-popup__position {
+    font-size: 0.75rem;
+  }
 }
 @media (max-width: 81.375em) and (width > 81.375em) {
   .union-function__card {
@@ -191,6 +329,9 @@
     margin-bottom: clamp( 2.25rem , 1.02800407331875rem  +  6.1099796334vw , 6rem );
   }
   .page__union {
+    margin-bottom: clamp( 2.25rem , 1.02800407331875rem  +  6.1099796334vw , 6rem );
+  }
+  .page__representatives {
     margin-bottom: clamp( 2.25rem , 1.02800407331875rem  +  6.1099796334vw , 6rem );
   }
   .management-structure__cards {
@@ -210,6 +351,9 @@
   }
   .union__sub-title:not(:last-child) {
     margin-bottom: clamp( 0.625rem , 0.50280040733125rem  +  0.6109979633vw , 1rem );
+  }
+  .union__text-body {
+    margin-bottom: clamp( 1.5rem , 1.011201629325rem  +  2.4439918534vw , 3rem );
   }
   .union-function__cards {
     gap: clamp( 0.75rem , 0.5056008146625rem  +  1.2219959267vw , 1.5rem );
@@ -235,6 +379,30 @@
   .union-function__member-company {
     font-size: clamp( 0.875rem , 0.83426680244375rem  +  0.2036659878vw , 1rem );
   }
+  .representatives__text-block {
+    margin-bottom: clamp( 1.5rem , 1.011201629325rem  +  2.4439918534vw , 3rem );
+  }
+  .representatives__text:not(:last-child) {
+    margin-bottom: clamp( 0.625rem , 0.50280040733125rem  +  0.6109979633vw , 1rem );
+  }
+  .map-popup__card {
+    width: clamp( 12.5rem , 11.5835030549875rem  +  4.5824847251vw , 15.3125rem );
+  }
+  .map-popup__card {
+    font-size: clamp( 0.875rem , 0.83426680244375rem  +  0.2036659878vw , 1rem );
+  }
+  .map-popup__image {
+    height: clamp( 6.25rem , 5.02800407331875rem  +  6.1099796334vw , 10rem );
+  }
+  .map-popup__title {
+    margin-bottom: clamp( 0.5rem , 0.4185336048875rem  +  0.4073319756vw , 0.75rem );
+  }
+  .map-popup__position {
+    margin-bottom: clamp( 0.5rem , 0.4185336048875rem  +  0.4073319756vw , 0.75rem );
+  }
+  .map-popup__position {
+    font-size: clamp( 0.75rem , 0.70926680244375rem  +  0.2036659878vw , 0.875rem );
+  }
 }
 @media (width > 81.375em) {
   .page__hero-section-managment {
@@ -244,6 +412,9 @@
     margin-bottom: 6rem;
   }
   .page__union {
+    margin-bottom: 6rem;
+  }
+  .page__representatives {
     margin-bottom: 6rem;
   }
   .management-structure__cards {
@@ -263,6 +434,9 @@
   }
   .union__sub-title:not(:last-child) {
     margin-bottom: 1rem;
+  }
+  .union__text-body {
+    margin-bottom: 3rem;
   }
   .union-function__cards {
     gap: 1.5rem;
@@ -287,6 +461,30 @@
   }
   .union-function__member-company {
     font-size: 1rem;
+  }
+  .representatives__text-block {
+    margin-bottom: 3rem;
+  }
+  .representatives__text:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .map-popup__card {
+    width: 15.3125rem;
+  }
+  .map-popup__card {
+    font-size: 1rem;
+  }
+  .map-popup__image {
+    height: 10rem;
+  }
+  .map-popup__title {
+    margin-bottom: 0.75rem;
+  }
+  .map-popup__position {
+    margin-bottom: 0.75rem;
+  }
+  .map-popup__position {
+    font-size: 0.875rem;
   }
 }
 @media (max-width: 81.375em) and (width > 20em) and (width <= 81.375em) {
