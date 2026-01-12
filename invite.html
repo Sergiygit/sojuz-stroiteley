@@ -8,11 +8,14 @@
 		<link rel="preload" href="./assets/fonts/BebasNeue-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
 		<title>Союз Строителей Кыргызской Республики</title>
-		<script type="module" crossorigin="" src="./js/invite.min.js?v=1767895575715"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1767895575715">
-		<link rel="modulepreload" crossorigin="" href="./js/footer.min.js?v=1767895575715">
-		<link rel="stylesheet" crossorigin="" href="./css/footer.min.css?v=1767895575715">
-		<link rel="stylesheet" crossorigin="" href="./css/invite.min.css?v=1767895575715">
+		<link rel="modulepreload" crossorigin href="./js/common.min.js?v=1768245385547">
+		<script type="module" crossorigin="" src="./js/footer.min.js?v=1768245385547"></script>
+		<script type="module" crossorigin="" src="./js/select.min.js?v=1768245385547"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/footer.min.css?v=1768245385547">
+		<link rel="stylesheet" crossorigin="" href="./css/select.min.css?v=1768245385547">
+		<link rel="stylesheet" crossorigin="" href="./css/invite.min.css?v=1768245385547">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min2.css?v=1768245385547">
+		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1768245385547">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -214,8 +217,8 @@
 								</div>
 								<form action="#" class="invite-form__form">
 									<div class="invite-form__input-block">
-										<label for="region" class="invite-form__label">Категория*</label>
-										<select name="form[]" required data-fls-select="" data-fls-select-modif="form">
+										<label for="category" class="invite-form__label">Категория*</label>
+										<select name="form[]" id="category" required data-fls-select="" data-fls-select-modif="form">
 											<option value="1" selected>Выберите категорию</option>
 											<option value="2">Пункт №2</option>
 											<option value="3">Пункт №3</option>
@@ -289,7 +292,12 @@
 									<div class="invite-form__checkbox-block">
 										<label class="invite-form__checkbox-label">
 											<input type="checkbox" required checked class="invite-form__checkbox-input">
-											Я согласен на обработку персональных данных и принимаю условия политики конфиденциальности
+											<span>
+												Я согласен на
+												<a href="#">обработку персональных данных</a>
+												и принимаю условия
+												<a href="#">политики конфиденциальности</a>
+											</span>
 										</label>
 									</div>
 									<button class="invite-form__button _button">Отправить заявку</button>

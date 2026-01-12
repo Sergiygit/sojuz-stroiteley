@@ -1,3 +1,12 @@
+function getHash() {
+  if (location.hash) {
+    return location.hash.replace("#", "");
+  }
+}
+function setHash(hash) {
+  hash = hash ? `#${hash}` : window.location.href.split("#")[0];
+  history.pushState("", "", hash);
+}
 let slideUp = (target, duration = 500, showmore = 0) => {
   if (!target.classList.contains("--slide")) {
     target.classList.add("--slide");
@@ -110,9 +119,30 @@ let bodyLock = (delay = 500) => {
     }, delay);
   }
 };
+function dataMediaQueries(array, dataSetValue) {
+  const media = Array.from(array).filter((item) => item.dataset[dataSetValue]).map((item) => {
+    const [value, type = "max"] = item.dataset[dataSetValue].split(",");
+    return { value, type, item };
+  });
+  if (media.length === 0) return [];
+  const breakpointsArray = media.map(({ value, type }) => `(${type}-width: ${value}px),${value},${type}`);
+  const uniqueQueries = [...new Set(breakpointsArray)];
+  return uniqueQueries.map((query) => {
+    const [mediaQuery, mediaBreakpoint, mediaType] = query.split(",");
+    const matchMedia = window.matchMedia(mediaQuery);
+    const itemsArray = media.filter((item) => item.value === mediaBreakpoint && item.type === mediaType);
+    return { itemsArray, matchMedia };
+  });
+}
 export {
-  slideToggle as a,
-  bodyLockToggle as b,
-  bodyLockStatus as c,
-  slideUp as s
+  bodyLock as a,
+  bodyLockStatus as b,
+  bodyUnlock as c,
+  dataMediaQueries as d,
+  setHash as e,
+  slideUp as f,
+  getHash as g,
+  slideToggle as h,
+  bodyLockToggle as i,
+  slideDown as s
 };
