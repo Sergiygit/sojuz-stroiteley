@@ -371,8 +371,12 @@ body {
 }
 .header__logo {
   z-index: 5;
+  position: relative;
 }
 .header__logo img {
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
 }
