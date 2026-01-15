@@ -145,6 +145,7 @@
 .contacts-form__checkbox-label {
   line-height: 140%;
   text-underline-position: from-font;
+  cursor: pointer;
 }
 .contacts-form__button {
   width: 100%;
@@ -305,7 +306,7 @@
     gap: 1.125rem;
   }
   .contacts-form__checkbox-label {
-    font-size: 0.75rem;
+    font-size: 0.625rem;
   }
   .contacts-form__checkbox-input {
     width: 1rem;
@@ -432,7 +433,7 @@
     gap: clamp( 1.125rem , 1.00280040733125rem  +  0.6109979633vw , 1.5rem );
   }
   .contacts-form__checkbox-label {
-    font-size: clamp( 0.75rem , 0.70926680244375rem  +  0.2036659878vw , 0.875rem );
+    font-size: clamp( 0.625rem , 0.5435336048875rem  +  0.4073319756vw , 0.875rem );
   }
   .contacts-form__checkbox-input {
     width: clamp( 1rem , 0.837067209775rem  +  0.8146639511vw , 1.5rem );

@@ -20,6 +20,9 @@
 .committees-card__image {
   border-radius: 0.375rem;
 }
+.committees-card__title {
+  margin-bottom: 0.125rem;
+}
 .committees-card__text {
   max-width: 39.375rem;
 }

@@ -245,6 +245,7 @@
 .invite-form__checkbox-label {
   line-height: 140%;
   text-underline-position: from-font;
+  cursor: pointer;
 }
 .invite-form__button {
   width: 100%;
